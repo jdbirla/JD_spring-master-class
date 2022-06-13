@@ -1,4 +1,4 @@
-== Spring Annotation Cheat Sheet
+== Spring Annotation World
 
 Spring includes a lot of annotations. Some are annotations created within Spring. Some are annotations called for by various Java specifications. The annotations fall into categories, as follows:
 
