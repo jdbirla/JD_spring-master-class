@@ -1,4 +1,5 @@
 # Spring Annotation World
 
-![Browser](Documentatoin/Screenshot_3.png)
+![Browser](Documentation/Screenshot_3.png)
+
 
