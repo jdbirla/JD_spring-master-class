@@ -12,6 +12,9 @@ Spring ApplicationContext.
 session - One bean per HTTP session. Web-aware
 Spring ApplicationContext.
 
+- when bean in static scope and dependecy in prototype even though dependecy classs will the same object but if we want to get different objects for dependcy class then we need to use proxymode where bean wll ge the same object but dependcy bean will get new object when request using proxy
+![image](https://user-images.githubusercontent.com/69948118/202094968-103258ef-5f15-46a4-8fb2-68eeac8b38be.png)
+
 ### Application Contexts
 ApplicationContext context =
 new ClassPathXmlApplicationContext(
