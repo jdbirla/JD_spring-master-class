@@ -87,6 +87,34 @@ Arrays.asList(
 ![image](https://user-images.githubusercontent.com/69948118/202136762-71cb9438-79ae-4fed-9b97-c789c77553ff.png)
 ![image](https://user-images.githubusercontent.com/69948118/202136988-8041c551-596c-4af1-82ff-8e16bdfaf6b9.png)
 
+### Spring AOP (Basic interception for spring managed beans)
+```java
+@Aspect
+@Configuration
+public class UseAccessAspect {
+	
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
+	
+	//What kind of method calls I would intercept
+	//execution(* PACKAGE.*.*(..)) : pointcuts
+	
+	@Before("execution(* com.in28minutes.spring.aop.springaop.business.*.*(..))")
+	public void before(JoinPoint joinPoint){
+		logger.info(" Check for user access ");
+		logger.info(" Allowed execution for {}", joinPoint);
+	}
+}
+```
+![image](https://user-images.githubusercontent.com/69948118/202164677-cecb4b24-5f1b-43e9-b8fb-b89d52f9307e.png)
+![image](https://user-images.githubusercontent.com/69948118/202164716-cb26d040-d09e-438d-a945-5fe120798e74.png)
+![image](https://user-images.githubusercontent.com/69948118/202166064-3ad20608-b6fb-48cf-a2d6-3e5550d5022e.png)
+![image](https://user-images.githubusercontent.com/69948118/202167003-c6f66363-1a75-47b3-822a-40672caab6f2.png)
+![image](https://user-images.githubusercontent.com/69948118/202170123-11eb242f-b701-49e2-a5e2-0d7c9ae82e03.png)
+
+
+
+### Aspectj (more powerful interception than spring AOP)
+
 ---
 ## Sprin Boot
 
