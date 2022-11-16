@@ -65,21 +65,7 @@ public class QuickSortAlgorithm implements SortAlgorithm {
 @Component
 public class BubbleSortAlgorithm implements SortAlgorithm {
 ```
-### Model Attribute
-Indicates the purpose of that method is to add one
-or more model attributes.
-Invoked before @RequestMapping methods.
-Used to fill the model with commonly needed
-attributes
-Drop down values for form
-```java
-@ModelAttribute
-public void addAttributes(Model model) {
-model.addAttribute("options",
-Arrays.asList(
-"Option 1","Option 2","Option 3" ));
-}
-```
+
 ### GOF vs Spring bean scope
 - GOF will give single obhect per JVM but spring bean scope will give single object per Application Context in under same JVM
 
@@ -114,6 +100,24 @@ public class UseAccessAspect {
 
 
 ### Aspectj (more powerful interception than spring AOP)
+
+### Spring MVC
+
+### Model Attribute
+Indicates the purpose of that method is to add one
+or more model attributes.
+Invoked before @RequestMapping methods.
+Used to fill the model with commonly needed
+attributes
+Drop down values for form
+```java
+@ModelAttribute
+public void addAttributes(Model model) {
+model.addAttribute("options",
+Arrays.asList(
+"Option 1","Option 2","Option 3" ));
+}
+```
 
 ---
 ## Sprin Boot
