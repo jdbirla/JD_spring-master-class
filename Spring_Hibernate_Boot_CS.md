@@ -83,6 +83,10 @@ Arrays.asList(
 ### GOF vs Spring bean scope
 - GOF will give single obhect per JVM but spring bean scope will give single object per Application Context in under same JVM
 
+### Read values from external properties file
+![image](https://user-images.githubusercontent.com/69948118/202136762-71cb9438-79ae-4fed-9b97-c789c77553ff.png)
+![image](https://user-images.githubusercontent.com/69948118/202136988-8041c551-596c-4af1-82ff-8e16bdfaf6b9.png)
+
 ---
 ## Sprin Boot
 
