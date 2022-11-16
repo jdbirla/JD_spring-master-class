@@ -4,7 +4,7 @@
 
 ## Spring
 
-### Other Scopes
+### Bean Scopes
 singleton - One instance per Spring Context
 prototype - New bean whenever requested
 request - One bean per HTTP request. Web-aware
@@ -16,6 +16,7 @@ Spring ApplicationContext.
 ![image](https://user-images.githubusercontent.com/69948118/202094968-103258ef-5f15-46a4-8fb2-68eeac8b38be.png)
 
 ### Application Contexts
+```java
 ApplicationContext context =
 new ClassPathXmlApplicationContext(
 new String[] {"BusinessApplicationContext.xml",
@@ -27,7 +28,7 @@ class SpringContext {
 ApplicationContext ctx =
 new AnnotationConfigApplicationContext(
 SpringContext.class);
-
+```
 ### Autowiring
 byType
 byName
@@ -35,6 +36,9 @@ constructor - similar to byType, but through
 constuctor
 
 ### by Type - Class or Interface
+
+```java
+
 @Component
 public class ComplexAlgorithmImpl {
 @Autowired
@@ -45,7 +49,10 @@ public int[] sort(int[] numbers);
 @Component
 public class QuickSortAlgorithm implements SortAlgorithm {
 
+```
+
 ###  by Name
+```java
 @Component
 public class ComplexAlgorithmImpl {
 @Autowired
@@ -57,7 +64,7 @@ public int[] sort(int[] numbers);
 public class QuickSortAlgorithm implements SortAlgorithm {
 @Component
 public class BubbleSortAlgorithm implements SortAlgorithm {
-
+```
 ### Model Attribute
 Indicates the purpose of that method is to add one
 or more model attributes.
