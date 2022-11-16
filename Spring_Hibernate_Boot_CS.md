@@ -65,13 +65,16 @@ Invoked before @RequestMapping methods.
 Used to fill the model with commonly needed
 attributes
 Drop down values for form
-
+```java
 @ModelAttribute
 public void addAttributes(Model model) {
 model.addAttribute("options",
 Arrays.asList(
 "Option 1","Option 2","Option 3" ));
 }
+```
+### GOF vs Spring bean scope
+- GOF will give single obhect per JVM but spring bean scope will give single object per Application Context in under same JVM
 
 ---
 ## Sprin Boot
