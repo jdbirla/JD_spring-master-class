@@ -111,6 +111,12 @@ public class UseAccessAspect {
 ![image](https://user-images.githubusercontent.com/69948118/202393126-c5abfcb9-041f-4863-b8c7-ba48a687fe10.png)
 
 
+
+
+---
+## Spring Boot
+
+
 ### Model Attribute
 Indicates the purpose of that method is to add one
 or more model attributes.
@@ -126,25 +132,6 @@ Arrays.asList(
 "Option 1","Option 2","Option 3" ));
 }
 ```
-
----
-## Sprin Boot
-
-### Spring Boot Features
-Auto Configuration
-Spring Boot Starter Projects
-Spring Boot Actuator
-Embedded Server
-
-### Spring Boot
-Eliminates all configuration needed by Spring and
-Spring MVC and auto configures it
-No need for @ComponentScan. Default
-Component Scan.
-No need to configure DispatcherServlet
-No need to configure a Data Source, Entity
-Manager Factory or Transaction Manager.
-
 ---
 
 ## JDBC/Spring JDBC/JPA/Hibernate
