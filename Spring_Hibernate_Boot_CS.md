@@ -102,6 +102,14 @@ public class UseAccessAspect {
 ### Aspectj (more powerful interception than spring AOP)
 
 ### Spring MVC
+- Servlet and jsp using JEE
+![image](https://user-images.githubusercontent.com/69948118/202369231-f2a17dc6-a9c2-4e7e-b61c-5b968c3f7df2.png)
+- Spring MVC
+![image](https://user-images.githubusercontent.com/69948118/202375026-40dd1541-391f-4e02-91fc-62175ddf6fa7.png)
+![image](https://user-images.githubusercontent.com/69948118/202388675-1079bd32-9382-49b9-b7f8-bd022def6ab5.png)
+![image](https://user-images.githubusercontent.com/69948118/202388900-271db70d-ef76-4424-b545-592972fc8259.png)
+![image](https://user-images.githubusercontent.com/69948118/202393126-c5abfcb9-041f-4863-b8c7-ba48a687fe10.png)
+
 
 ### Model Attribute
 Indicates the purpose of that method is to add one
