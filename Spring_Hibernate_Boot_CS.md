@@ -115,6 +115,25 @@ public class UseAccessAspect {
 
 ---
 ## Spring Boot
+### Spring Boot with MVC
+
+- /src/main/resources/META-INF/resources/WEB-INF/jsp/sayHello.jsp
+```html
+<html>
+	<head>
+		<title> My first HTML Page - JSP</title>
+	</head>
+	<body>
+		My first html page with body - JSP
+	</body>
+</html>
+```
+- /src/main/resources/application.properties Modified here you can see no need of dispatcher servlet as spring boot is doing configuration for us
+```properties
+spring.mvc.view.prefix=/WEB-INF/jsp/
+spring.mvc.view.suffix=.jsp
+logging.level.org.springframework=debug**
+```
 
 
 ### Model Attribute
