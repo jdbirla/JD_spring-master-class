@@ -134,9 +134,16 @@ spring.mvc.view.prefix=/WEB-INF/jsp/
 spring.mvc.view.suffix=.jsp
 logging.level.org.springframework=debug**
 ```
+#### Spring boot logging
+![image](https://user-images.githubusercontent.com/69948118/202606001-2f18f2d0-ccd0-4623-a48a-3c91abec1125.png)
+
+### Request vs Modle Vs Session
+- Model is also valid till that request 
+@SessionAttribultes ("name")
+![image](https://user-images.githubusercontent.com/69948118/202609457-ed31de58-eae2-4906-a86f-e4d339de7c88.png)
 
 
-### Model Attribute
+#### Model Attribute
 Indicates the purpose of that method is to add one
 or more model attributes.
 Invoked before @RequestMapping methods.
