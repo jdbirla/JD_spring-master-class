@@ -157,6 +157,8 @@ logging.level.org.springframework=debug**
 	<artifactId>spring-boot-starter-security</artifactId>
 </dependency>
 ```
+### Spring Data
+![image](https://user-images.githubusercontent.com/69948118/202648920-e786dd82-b48d-41d4-839b-10da8df2c955.png)
 
 
 #### Model Attribute
