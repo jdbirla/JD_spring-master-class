@@ -142,6 +142,22 @@ logging.level.org.springframework=debug**
 @SessionAttribultes ("name")
 ![image](https://user-images.githubusercontent.com/69948118/202609457-ed31de58-eae2-4906-a86f-e4d339de7c88.png)
 
+#### web jars https://www.webjars.org/
+- client side libraries(jQuery , bootstrap) in Java jar packaging
+
+#### Validation with Spring Boot
+![image](https://user-images.githubusercontent.com/69948118/202620125-2b720608-1426-43e5-8dd2-8912206eebc5.png)
+![image](https://user-images.githubusercontent.com/69948118/202621622-d6e1a8e3-0c0e-4345-b735-bb86c98fe80e.png)
+![image](https://user-images.githubusercontent.com/69948118/202624247-409bcb1d-c3f0-4a9c-8d0f-b7bf3ffd07d7.png)
+
+### Spring Security
+```
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-security</artifactId>
+</dependency>
+```
+
 
 #### Model Attribute
 Indicates the purpose of that method is to add one
