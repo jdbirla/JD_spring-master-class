@@ -160,6 +160,11 @@ logging.level.org.springframework=debug**
 ### Spring Data
 ![image](https://user-images.githubusercontent.com/69948118/202648920-e786dd82-b48d-41d4-839b-10da8df2c955.png)
 
+### Spring Boot REST
+- @restController is combination of @controller and @ResponseBody
+- When will return any string it will be return as string 
+- When will return any bean it will return as JSON of the bean because of starter project and autconfiguration of Jackson
+- 
 
 #### Model Attribute
 Indicates the purpose of that method is to add one
