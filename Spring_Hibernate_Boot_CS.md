@@ -365,6 +365,54 @@ public class StudentService {
 StudentRepository service;
 ```
 
+### JDBC VS JDBC template VS JPA VS Hibernate  VS Spring Data JPA
+
+|#  |JDBC|Spring JDBC template |JPA|Hibernate|Spring Data JPA|
+|---|--- |---           |---|---      |---			  |
+|Description|The very first way to connect a Java application to a database is using JDBC |Spring JdbcTemplate is a powerful mechanism to connect to the database and execute SQL queries. It internally uses JDBC api, but eliminates a lot of problems of JDBC API. | JPA is a specification and defines the way to manage relational database data using java objects.| Hibernate is an implementation of JPA. It is an ORM tool to persist java objects into the relational databases.|Spring Data JPA is a JPA data access abstraction. Spring Data JPA cannot work without a JPA provider |
+|Syntax| ```Class.forName("com.mysql.jdbc.Driver");  Connection con=DriverManager.getConnection(  "jdbc:mysql://localhost:3306/sonoo","root","root");  //here sonoo is database name, root is username and password  Statement stmt=con.createStatement();  ResultSet rs=stmt.executeQuery("select * from emp");  while(rs.next())  System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3));  con.close();  ```| ```int result = jdbcTemplate.queryForObject(     "SELECT COUNT(*) FROM EMPLOYEE", Integer.class); ```| ```  EntityManagerFactory factory = Persistence.createEntityManagerFactory("UsersDB");         EntityManager entityManager = factory.createEntityManager();                  entityManager.getTransaction().begin();                  User newUser = new User();         newUser.setEmail("billjoy@gmail.com");         newUser.setFullname("bill Joy");         newUser.setPassword("billi");                  entityManager.persist(newUser);                  entityManager.getTransaction().commit();                  entityManager.close();         factory.close();```| ```    StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();     Metadata meta = new MetadataSources(ssr).getMetadataBuilder().build();  	SessionFactory factory = meta.getSessionFactoryBuilder().build();  	Session session = factory.openSession();  	Transaction t = session.beginTransaction();                   Employee e1=new Employee();        e1.setId(101);        e1.setFirstName("Gaurav");        e1.setLastName("Chawla");                session.save(e1);      t.commit();      System.out.println("successfully saved");        factory.close();      session.close();    ```| ```public interface CustomerRepository extends CrudRepository<Customer, Long> {     List<Customer> findByLastName(String lastName); } ``` ```  private CustomerRepository repository;          public void test() {         // Save a new customer         Customer newCustomer = new Customer();         newCustomer.setFirstName("John");         newCustomer.setLastName("Smith");                  repository.save(newCustomer);                  // Find a customer by ID         Optional<Customer> result = repository.findById(1L);         result.ifPresent(customer -> System.out.println(customer));                  // Find customers by last name         List<Customer> customers = repository.findByLastName("Smith");         customers.forEach(customer -> System.out.println(customer));                  // List all customers         Iterable<Customer> iterator = repository.findAll();         iterator.forEach(customer -> System.out.println(customer));                  // Count number of customer         long count = repository.count();         System.out.println("Number of customers: " + count);```|
+
+
+```java
+public interface CustomerRepository extends CrudRepository<Customer, Long> {
+	List<Customer> findByLastName(String lastName);
+}
+
+private CustomerRepository repository;
+
+public void test() { // Save a new customer
+	 Customer newCustomer = new Customer(); 
+	newCustomer.setFirstName("John"); 
+	newCustomer.setLastName("Smith"); 
+	repository.save(newCustomer); 
+	// Find a customer by ID 
+	Optional<Customer> result = repository.findById(1L);
+	result.ifPresent(customer -> System.out.println(customer)); 
+	// Find customers by last name 
+	List<Customer> customers = repository.findByLastName("Smith"); 
+	customers.forEach(customer -> System.out.println(customer)); 
+	// List all customers 
+	Iterable<Customer> iterator = repository.findAll(); 
+	iterator.forEach(customer -> System.out.println(customer)); 
+	// Count number of customer 
+	long count = repository.count();
+	System.out.println("Number of customers: " + count);
+}
+```
+---
+###  JPA VS Hibernate
+![image](https://user-images.githubusercontent.com/69948118/173209797-a8a5237d-4885-4aa8-b9a6-7651a9309449.png)
+![image](https://user-images.githubusercontent.com/69948118/173209984-26b1dd2a-3929-4989-baf9-725c3b5eb5c9.png)
+![image](https://user-images.githubusercontent.com/69948118/175798578-53560c85-0adc-4777-820e-5f654f25114a.png)
+![image](https://user-images.githubusercontent.com/69948118/175798641-1ef19dee-9e6b-48a5-b378-fc2e42b5e218.png)
+![image](https://user-images.githubusercontent.com/69948118/175798758-6b117595-b66d-4edd-a959-6d9944ab6078.png)
+![image](https://user-images.githubusercontent.com/69948118/175798832-18ed5761-31e8-49e3-ac3e-0c719045b4d6.png)
+![image](https://user-images.githubusercontent.com/69948118/175798846-67b5b6db-2d59-4b78-92c0-284555bfe4b0.png)
+
+
+
+
+
 ## Spring Data JPA
 ### Using Spring Data JPA
 ```java
