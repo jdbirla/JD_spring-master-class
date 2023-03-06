@@ -410,9 +410,7 @@ public void test() { // Save a new customer
 ![image](https://user-images.githubusercontent.com/69948118/175798846-67b5b6db-2d59-4b78-92c0-284555bfe4b0.png)
 ![image](https://user-images.githubusercontent.com/69948118/218351568-b014dd37-e601-4f34-9285-8f662363cc8f.png)
 
-
-
-
+---
 
 ## Spring Data JPA
 ### Using Spring Data JPA
